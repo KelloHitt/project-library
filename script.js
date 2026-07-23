@@ -9,9 +9,9 @@ function Book(title, author, numOfPages, bookRead, id) {
   this.bookRead = bookRead ? "read" : "not read yet";
   this.id = id;
 
-  this.info() = function () {
+  this.info = function () {
     return `${this.title} by ${this.author}, ${this.numOfPages} pages, ${this.bookRead}`;
-  }
+  };
 }
 
 // Creating a book using parameters then sotring it in an array
@@ -28,9 +28,7 @@ addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, true);
 addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
 addBookToLibrary("Dune", "Frank Herbert", 412, true);
 
-console.log(myLibrary);
-console.log("Hiiii?");
-
-for (const book in myLibrary) {
+// book here is the index not the actual Book object
+for (const book of myLibrary) {
   console.log(book.info());
 }
