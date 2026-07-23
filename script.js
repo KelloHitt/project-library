@@ -24,11 +24,11 @@ function addBookToLibrary(title, author, numOfPages, bookRead) {
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, true);
 addBookToLibrary("1984", "George Orwell", 328, false);
-addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, true);
-addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
-addBookToLibrary("Dune", "Frank Herbert", 412, true);
 
 // book here is the index not the actual Book object
 for (const book of myLibrary) {
   console.log(book.info());
 }
+
+const cards = document.querySelector(".cards");
+console.log(cards);
